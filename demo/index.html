@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Respaldaya Widget</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #475569;
+      }
+
+      section {
+        margin-top: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Demo local · Respaldaya Widget</h1>
+      <p>
+        Ajusta <code>data-testimonial-space</code> y <code>data-api-base</code> segun tu instancia local de
+        <code>respaldaya-app</code>.
+      </p>
+
+      <section>
+        <h2>Wall</h2>
+        <div
+          data-testimonial-space="demo-space"
+          data-layout="wall"
+          data-theme="light"
+          data-min-stars="4"
+          data-max="6"
+          data-api-base="http://localhost:3000"
+        ></div>
+      </section>
+
+      <section>
+        <h2>Carousel</h2>
+        <div
+          data-testimonial-space="demo-space"
+          data-layout="carousel"
+          data-theme="auto"
+          data-max="4"
+          data-api-base="http://localhost:3000"
+        ></div>
+      </section>
+
+      <section>
+        <h2>Missing Slug</h2>
+        <div data-layout="list" data-api-base="http://localhost:3000"></div>
+      </section>
+    </div>
+
+    <script src="../dist/widget.js"></script>
+  </body>
+</html>

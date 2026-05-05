@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runtime Validation</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 24px;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      .host-banner {
+        padding: 12px 16px;
+        background: #dbeafe;
+        border: 1px solid #93c5fd;
+        border-radius: 8px;
+        margin-bottom: 24px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 24px;
+      }
+
+      .case {
+        padding: 16px;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+      }
+
+      .host-footer {
+        margin-top: 24px;
+        color: #475569;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="host-banner" class="host-banner">Host page marker</div>
+
+    <div class="grid">
+      <section class="case">
+        <h2>valid-approved</h2>
+        <div
+          id="case-valid-approved"
+          data-testimonial-space="flow-alpha"
+          data-api-base="http://127.0.0.1:3001"
+          data-layout="carousel"
+          data-theme="light"
+          data-max="3"
+        ></div>
+      </section>
+
+      <section class="case">
+        <h2>valid-empty</h2>
+        <div
+          id="case-valid-empty"
+          data-testimonial-space="reject-flow"
+          data-api-base="http://127.0.0.1:3001"
+          data-layout="list"
+          data-theme="light"
+        ></div>
+      </section>
+
+      <section class="case">
+        <h2>invalid-slug</h2>
+        <div
+          id="case-invalid-slug"
+          data-testimonial-space="does-not-exist"
+          data-api-base="http://127.0.0.1:3001"
+        ></div>
+      </section>
+
+      <section class="case">
+        <h2>bad-api-base</h2>
+        <div
+          id="case-bad-api"
+          data-testimonial-space="flow-alpha"
+          data-api-base="http://127.0.0.1:3999"
+        ></div>
+      </section>
+
+      <section class="case">
+        <h2>multi-a</h2>
+        <div
+          id="case-multi-a"
+          data-testimonial-space="flow-alpha"
+          data-api-base="http://127.0.0.1:3001"
+          data-layout="wall"
+          data-theme="light"
+          data-max="1"
+        ></div>
+      </section>
+
+      <section class="case">
+        <h2>multi-b</h2>
+        <div
+          id="case-multi-b"
+          data-testimonial-space="flow-alpha"
+          data-api-base="http://127.0.0.1:3001"
+          data-layout="list"
+          data-theme="dark"
+          data-min-stars="5"
+        ></div>
+      </section>
+    </div>
+
+    <div id="host-footer" class="host-footer">Host footer marker</div>
+
+    <script src="../dist/widget.js"></script>
+  </body>
+</html>
