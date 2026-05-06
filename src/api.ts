@@ -14,7 +14,7 @@ import type {
 
 const API_PATH = "/api/widget/";
 const EVENTS_PATH = "/api/events";
-const FETCH_TIMEOUT_MS = 15000;
+const FETCH_TIMEOUT_MS = 30000;
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
